@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0; /* Reset web margin to 0 */
+  padding: 0; /* Reset web padding to 0 */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html {
+  font-size: 10px; /* Base font size */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    background-color: #f0f0f0; /* Light background color */
+}
