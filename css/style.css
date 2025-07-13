@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --primary-color: #008ec4;
+  --white-shade: #f0f0f0;
+  --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
+  --font-sm: clamp(2rem, calc(0.5rem + 0.5vw), 100rem);
+  --gap-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
+  --primary-border-radius: 5vw;
+}
+
 * {
   margin: 0; /* Reset web margin to 0 */
   padding: 0; /* Reset web padding to 0 */
@@ -12,8 +21,118 @@ html {
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    background-color: #f0f0f0; /* Light background color */
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  background-color: var(--white-shade);
 }
+
+/* ------------------------------> Reuseable Content <------------------------------ */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent element */
+}
+
+ul li {
+  list-style-type: none; /* Remove default list style */
+}
+
+.web-main-row {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto; /* Center the main row */
+}
+
+/* ------------------------------> Start Header Section <------------------------------ */
+header {
+  width: 100%;
+  height: 100dvh;
+  transition: 0.3s ease;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: 10;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--white-shade);
+  font-size: var(--font-lg);
+  font-weight: 700;
+}
+
+.navigation-bar ul {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.navigation-bar ul li a {
+  position: relative;
+  color: var(--white-shade);
+  font-size: var(--font-sm);
+  padding: 0.5vw 1vw;
+}
+
+.navigation-bar ul li a::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 0.2vw;
+  background: var(--white-shade);
+  transform: scale(0);
+  border-radius: var(--primary-border-radius);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation-bar ul li a:hover::before {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-bg {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  background-image: url("../assets/acenda-main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000004d; /* Semi-transparent overlay */
+}
+
+.banner-content {
+  width: 100%;
+  height: 20%;
+  background-color: yellow;
+}
+
+/* ------------------------------> End Header Section <------------------------------ */
