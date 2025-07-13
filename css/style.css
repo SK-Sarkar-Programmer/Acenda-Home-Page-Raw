@@ -4,14 +4,14 @@
   --primary-color: #008ec4;
   --white-shade: #f0f0f0;
   --black-shade: #101010;
-  --font-xl: clamp(2rem, calc(1.5rem + 2.5vw), 100rem);
+  --font-xl: clamp(3rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
-  --font-base: clamp(1rem, calc(0.5rem + 1vw), 100rem);
+  --font-base: clamp(1.7rem, calc(0.5rem + 1vw), 100rem);
   --font-sm: clamp(1rem, calc(0.5rem + 0.5vw), 100rem);
   --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
   --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
-  --padding-sm: clamp(0.4rem, calc(0.5rem + 0.7vw), 100rem);
-  --padding-xs: clamp(0.4rem, calc(0.2rem + 0.5vw), 100rem);
+  --padding-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
+  --padding-xs: clamp(0.8rem, calc(0.2rem + 0.5vw), 100rem);
   --gap-sm: clamp(0.5rem, calc(0.5rem + 0.7vw), 100rem);
   --gap-xs: clamp(0.3rem, calc(0.3rem + 0.3vw), 100rem);
   --primary-border-radius: 5vw;
@@ -52,7 +52,7 @@ button {
   padding: var(--padding-xs) var(--padding-xl);
   border: none;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 button:focus-within {
@@ -67,7 +67,7 @@ button:focus-within {
 }
 
 .primary-btn:hover {
-  background-color: #008ec41A;
+  background-color: #008ec41a;
   color: var(--black-shade);
 }
 
@@ -75,6 +75,10 @@ button:focus-within {
   width: 85%;
   height: 100%;
   margin: 0 auto; /* Center the main row */
+}
+
+.section-title {
+  font-size: var(--font-lg);
 }
 
 /* ------------------------------> Start Header Section <------------------------------ */
@@ -139,6 +143,16 @@ nav {
   transform-origin: left;
 }
 
+/* Navigation Menu For Smaller Devices */
+/* .navigation-menu {
+  display: none;
+}
+
+.navigation-menu .open-menu .icon i {
+  color: var(--white-shade);
+  font-size: var(--font-lg);
+} */
+
 .banner {
   width: 100%;
   height: 100%;
@@ -189,9 +203,10 @@ nav {
   color: var(--black-shade);
   font-size: var(--font-lg);
   font-weight: 300;
+  line-height: 1;
 }
 
-.search-container {
+.create-account {
   background-color: var(--white-shade);
   padding: var(--padding-xl) var(--padding-2xl);
   padding-top: var(--padding-xs);
@@ -199,17 +214,17 @@ nav {
   box-shadow: 0 0 1vw #008ec44d;
 }
 
-.search-container form {
+.create-account form {
   text-align: center;
 }
 
-.search-container form .fields {
+.create-account form .fields {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gap-sm);
 }
 
-.search-container form .fields input {
+.create-account form .fields input {
   width: 100%;
   background-color: #008ec41a;
   font-size: var(--font-base);
@@ -219,16 +234,16 @@ nav {
   border-radius: 0.3vw;
 }
 
-.search-container form .fields input:focus-within {
+.create-account form .fields input:focus-within {
   outline: none;
 }
 
-.search-container form .fields input:focus-within::placeholder {
+.create-account form .fields input:focus-within::placeholder {
   color: #008ec44d;
   transition: 0.2s ease;
 }
 
-.search-container form button {
+.create-account form button {
   margin-top: var(--padding-sm);
 }
 

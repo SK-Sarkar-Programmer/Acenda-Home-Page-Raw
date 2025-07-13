@@ -1,0 +1,21 @@
+@media only screen and (max-width: 640px) {
+  /* .web-main-row {
+    width: 95%;
+  }
+
+  .navigation-bar {
+    display: none;
+  }
+
+  .navigation-menu {
+    display: block;
+  } */
+
+  nav {
+    height: 10%;
+  }
+
+  .create-account form .fields {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
