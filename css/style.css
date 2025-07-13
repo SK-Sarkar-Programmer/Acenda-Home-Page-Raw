@@ -3,9 +3,17 @@
 :root {
   --primary-color: #008ec4;
   --white-shade: #f0f0f0;
+  --black-shade: #101010;
+  --font-xl: clamp(2rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
-  --font-sm: clamp(2rem, calc(0.5rem + 0.5vw), 100rem);
-  --gap-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
+  --font-base: clamp(1rem, calc(0.5rem + 1vw), 100rem);
+  --font-sm: clamp(1rem, calc(0.5rem + 0.5vw), 100rem);
+  --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
+  --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
+  --padding-sm: clamp(0.4rem, calc(0.5rem + 0.7vw), 100rem);
+  --padding-xs: clamp(0.4rem, calc(0.2rem + 0.5vw), 100rem);
+  --gap-sm: clamp(0.5rem, calc(0.5rem + 0.7vw), 100rem);
+  --gap-xs: clamp(0.3rem, calc(0.3rem + 0.3vw), 100rem);
   --primary-border-radius: 5vw;
 }
 
@@ -35,6 +43,32 @@ a {
 
 ul li {
   list-style-type: none; /* Remove default list style */
+}
+
+button {
+  color: var(--black-shade);
+  font-size: var(--font-base);
+  font-weight: 500;
+  padding: var(--padding-xs) var(--padding-xl);
+  border: none;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+button:focus-within {
+  outline: none;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white-shade);
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 0.5vw;
+}
+
+.primary-btn:hover {
+  background-color: #008ec41A;
+  color: var(--black-shade);
 }
 
 .web-main-row {
@@ -82,7 +116,7 @@ nav {
 .navigation-bar ul li a {
   position: relative;
   color: var(--white-shade);
-  font-size: var(--font-sm);
+  font-size: var(--font-base);
   padding: 0.5vw 1vw;
 }
 
@@ -113,7 +147,7 @@ nav {
 .banner-bg {
   position: relative;
   width: 100%;
-  height: 80%;
+  height: 76%;
   background-image: url("../assets/acenda-main-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,10 +163,73 @@ nav {
   background-color: #0000004d; /* Semi-transparent overlay */
 }
 
-.banner-content {
+.title-description-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 20%;
-  background-color: yellow;
+  height: fit-content;
+}
+
+.title-description {
+  background-color: var(--white-shade);
+  text-align: center;
+  padding: var(--padding-xl) var(--padding-2xl);
+  padding-bottom: var(--padding-xs);
+  border-radius: var(--primary-border-radius) var(--primary-border-radius) 0 0;
+}
+
+.title-description .title {
+  color: var(--primary-color);
+  font-size: var(--font-xl);
+  line-height: 1.2;
+}
+
+.title-description .description {
+  color: var(--black-shade);
+  font-size: var(--font-lg);
+  font-weight: 300;
+}
+
+.search-container {
+  background-color: var(--white-shade);
+  padding: var(--padding-xl) var(--padding-2xl);
+  padding-top: var(--padding-xs);
+  border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
+  box-shadow: 0 0 1vw #008ec44d;
+}
+
+.search-container form {
+  text-align: center;
+}
+
+.search-container form .fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-sm);
+}
+
+.search-container form .fields input {
+  width: 100%;
+  background-color: #008ec41a;
+  font-size: var(--font-base);
+  padding: var(--padding-xs);
+  border: none;
+  border-bottom: 0.2vw solid var(--primary-color);
+  border-radius: 0.3vw;
+}
+
+.search-container form .fields input:focus-within {
+  outline: none;
+}
+
+.search-container form .fields input:focus-within::placeholder {
+  color: #008ec44d;
+  transition: 0.2s ease;
+}
+
+.search-container form button {
+  margin-top: var(--padding-sm);
 }
 
 /* ------------------------------> End Header Section <------------------------------ */
