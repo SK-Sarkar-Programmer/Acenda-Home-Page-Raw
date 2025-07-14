@@ -338,30 +338,37 @@ nav {
 /* ------------------------------> End Our Partners Logo Section <------------------------------ */
 .our-partners-logos[marquee-animation="true"] {
   overflow: hidden;
-  /* -webkit-mask: linear-gradient(
+  -webkit-mask: linear-gradient(
     90deg,
     transparent,
     #fff 20%,
     #fff 80%,
     transparent
   );
-  mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent); */
+  mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
 .logo-container {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap-xs) var(--gap-lg);
+  gap: 0.5vw 5vw;
 }
 
 .our-partners-logos[marquee-animation="true"] .logo-container {
+  width: max-content;
   flex-wrap: nowrap;
-  animation: logosMarquee 3s linear infinite;
+  animation: logosMarquee 10s linear infinite;
 }
 
 .logo-container .logo {
-  width: max-content;
+  width: clamp(1.6rem, calc(7rem + 12vw), 100rem);
   padding: var(--padding-sm);
+}
+
+.logo-container .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 @keyframes logosMarquee {

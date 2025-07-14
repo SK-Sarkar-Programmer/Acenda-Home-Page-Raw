@@ -28,5 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       logoSlides.appendChild(logoCopied);
     });
+
+    partnersMarquee.addEventListener("mouseenter", function () {
+      logoSlides.style.animationPlayState = "paused";
+    });
+
+    partnersMarquee.addEventListener("mouseleave", function () {
+      logoSlides.style.animationPlayState = "running";
+    });
   }
 });
