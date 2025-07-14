@@ -7,14 +7,17 @@
   --font-xl: clamp(3rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --font-base: clamp(1.7rem, calc(0.5rem + 1vw), 100rem);
-  --font-sm: clamp(1rem, calc(0.5rem + 0.5vw), 100rem);
+  --font-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
   --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
   --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
   --padding-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
   --padding-xs: clamp(0.8rem, calc(0.2rem + 0.5vw), 100rem);
+  --gap-lg: clamp(0.5rem, calc(1rem + 2vw), 100rem);
   --gap-sm: clamp(0.5rem, calc(0.5rem + 0.7vw), 100rem);
   --gap-xs: clamp(0.3rem, calc(0.3rem + 0.3vw), 100rem);
   --primary-border-radius: 5vw;
+  --secondary-border-radius: 0.5vw;
+  --primary-transition: 0.3s ease;
 }
 
 * {
@@ -95,7 +98,7 @@ section {
 header {
   width: 100%;
   height: 100dvh;
-  transition: 0.3s ease;
+  transition: var(--primary-transition);
 }
 
 nav {
@@ -145,7 +148,7 @@ nav {
   transform: scale(0);
   border-radius: var(--primary-border-radius);
   transform-origin: right;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--primary-transition);
 }
 
 .navigation-bar ul li a:hover::before {
@@ -279,6 +282,54 @@ nav {
 .why-choose-us-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-sm);
+  padding-top: var(--padding-xl);
+}
+
+.box {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--padding-sm) var(--padding-xs);
+  border-radius: 0.5vw;
+  transition: var(--primary-transition);
+}
+
+.box:hover {
+  transform: translateY(-5%);
+  box-shadow: 0.2vw 0.2vw 1vw #008ec480;
+  cursor: pointer;
+}
+
+.box .icon {
+  width: fit-content;
+  height: fit-content;
+  background-color: #008ec41a;
+  margin: 0 auto;
+  padding: var(--padding-sm);
+  border-radius: 1vw;
+}
+
+.box .icon i {
+  width: var(--font-xl);
+  height: var(--font-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: var(--font-base);
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.box .info .title h4 {
+  font-size: var(--font-base);
+  padding: var(--padding-xs) 0;
+}
+
+.box .info .description p {
+  font-size: var(--font-sm);
+  line-height: 1.2;
 }
 
 /* ------------------------------> End Why Choose Us Section <------------------------------ */
