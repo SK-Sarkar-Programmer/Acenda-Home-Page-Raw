@@ -6,8 +6,8 @@
   --black-shade: #101010;
   --font-xl: clamp(3rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
-  --font-base: clamp(1.7rem, calc(0.5rem + 1vw), 100rem);
-  --font-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
+  --font-base: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
+  --font-sm: clamp(1.3rem, calc(0.5rem + 0.7vw), 100rem);
   --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
   --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
   --padding-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
@@ -87,6 +87,7 @@ section {
 
 .section-title-container {
   text-align: center;
+  padding-bottom: var(--padding-xl);
 }
 
 .section-title h2 {
@@ -283,7 +284,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-sm);
-  padding-top: var(--padding-xl);
 }
 
 .box {
@@ -325,6 +325,7 @@ nav {
 .box .info .title h4 {
   font-size: var(--font-base);
   padding: var(--padding-xs) 0;
+  line-height: 1.1;
 }
 
 .box .info .description p {
@@ -333,3 +334,40 @@ nav {
 }
 
 /* ------------------------------> End Why Choose Us Section <------------------------------ */
+
+/* ------------------------------> End Our Partners Logo Section <------------------------------ */
+.our-partners-logos[marquee-animation="true"] {
+  overflow: hidden;
+  /* -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent); */
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-xs) var(--gap-lg);
+}
+
+.our-partners-logos[marquee-animation="true"] .logo-container {
+  flex-wrap: nowrap;
+  animation: logosMarquee 3s linear infinite;
+}
+
+.logo-container .logo {
+  width: max-content;
+  padding: var(--padding-sm);
+}
+
+@keyframes logosMarquee {
+  to {
+    transform: translateX(calc(-50% - var(--gap-lg)));
+  }
+}
+
+/* ------------------------------> End Our Partners Logo Section <------------------------------ */
