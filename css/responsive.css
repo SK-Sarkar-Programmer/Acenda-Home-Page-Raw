@@ -1,15 +1,35 @@
-@media only screen and (max-width: 640px) {
-  /* .web-main-row {
-    width: 95%;
+@media only screen and (max-width: 1024px) {
+  .create-account form .fields {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+  .create-account form .create-account-btns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .create-account form .create-account-btns button:first-child {
+    grid-column: 2 / span 1;
+  }
+
+  .create-account form .create-account-btns button:last-child {
+    grid-column: 3 / span 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .navigation-bar {
     display: none;
   }
 
   .navigation-menu {
     display: block;
-  } */
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .web-main-row {
+    width: 95%;
+  }
 
   nav {
     height: 10%;
@@ -17,5 +37,19 @@
 
   .create-account form .fields {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .create-account form .create-account-btns {
+    width: 85%;
+    margin: var(--padding-sm) auto 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .create-account form .create-account-btns button:first-child {
+    grid-column: 1 / span 1;
+  }
+
+  .create-account form .create-account-btns button:last-child {
+    grid-column: 2 / span 1;
   }
 }

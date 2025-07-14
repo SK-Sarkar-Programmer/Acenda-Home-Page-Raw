@@ -59,6 +59,11 @@ button:focus-within {
   outline: none;
 }
 
+section {
+  margin-top: clamp(3rem, calc(2rem + 5vw), 100rem);
+  margin-bottom: clamp(1rem, calc(0.5rem + 2vw), 100rem);
+}
+
 .primary-btn {
   background-color: var(--primary-color);
   color: var(--white-shade);
@@ -77,8 +82,13 @@ button:focus-within {
   margin: 0 auto; /* Center the main row */
 }
 
-.section-title {
+.section-title-container {
+  text-align: center;
+}
+
+.section-title h2 {
   font-size: var(--font-lg);
+  font-weight: 700;
 }
 
 /* ------------------------------> Start Header Section <------------------------------ */
@@ -144,14 +154,24 @@ nav {
 }
 
 /* Navigation Menu For Smaller Devices */
-/* .navigation-menu {
+.navigation-menu {
   display: none;
 }
 
-.navigation-menu .open-menu .icon i {
+.navigation-menu .open-menu .menu-btn i {
   color: var(--white-shade);
   font-size: var(--font-lg);
-} */
+}
+
+.navigation-small-device {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: #1010104d;
+}
 
 .banner {
   width: 100%;
@@ -161,7 +181,6 @@ nav {
 .banner-bg {
   position: relative;
   width: 100%;
-  height: 76%;
   background-image: url("../assets/acenda-main-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,13 +215,13 @@ nav {
 .title-description .title {
   color: var(--primary-color);
   font-size: var(--font-xl);
+  letter-spacing: 0.2vw;
   line-height: 1.2;
 }
 
 .title-description .description {
   color: var(--black-shade);
   font-size: var(--font-lg);
-  font-weight: 300;
   line-height: 1;
 }
 
@@ -212,10 +231,6 @@ nav {
   padding-top: var(--padding-xs);
   border-radius: 0 0 var(--primary-border-radius) var(--primary-border-radius);
   box-shadow: 0 0 1vw #008ec44d;
-}
-
-.create-account form {
-  text-align: center;
 }
 
 .create-account form .fields {
@@ -243,8 +258,27 @@ nav {
   transition: 0.2s ease;
 }
 
-.create-account form button {
+.create-account form .create-account-btns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--gap-sm);
   margin-top: var(--padding-sm);
 }
 
+.create-account form .create-account-btns button:first-child {
+  grid-column: 3 / span 1;
+}
+
+.create-account form .create-account-btns button:last-child {
+  grid-column: 4 / span 1;
+}
+
 /* ------------------------------> End Header Section <------------------------------ */
+
+/* ------------------------------> Start Why Choose Us Section <------------------------------ */
+.why-choose-us-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ------------------------------> End Why Choose Us Section <------------------------------ */
