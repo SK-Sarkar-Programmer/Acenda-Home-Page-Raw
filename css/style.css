@@ -79,6 +79,18 @@ section {
   color: var(--black-shade);
 }
 
+.secondary-btn {
+  background-color: #008ec41a;
+  color: var(--black-shade);
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 0.5vw;
+}
+
+.secondary-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-shade);
+}
+
 .web-main-row {
   width: 85%;
   height: 100%;
@@ -373,7 +385,7 @@ nav {
 
 @keyframes logosMarquee {
   to {
-    transform: translateX(calc(-50% - var(--gap-lg)));
+    transform: translateX(calc(-50% - 2.5vw));
   }
 }
 
