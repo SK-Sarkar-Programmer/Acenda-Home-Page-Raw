@@ -4,6 +4,7 @@
   --primary-color: #008ec4;
   --white-shade: #f0f0f0;
   --black-shade: #101010;
+  --font-2xl: clamp(4rem, calc(3rem + 5vw), 100rem);
   --font-xl: clamp(3rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --font-base: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
@@ -16,7 +17,7 @@
   --gap-sm: clamp(0.5rem, calc(0.5rem + 0.7vw), 100rem);
   --gap-xs: clamp(0.3rem, calc(0.3rem + 0.3vw), 100rem);
   --primary-border-radius: 5vw;
-  --secondary-border-radius: 0.5vw;
+  --secondary-border-radius: 1vw;
   --primary-transition: 0.3s ease;
 }
 
@@ -390,6 +391,90 @@ nav {
 }
 
 /* ------------------------------> End Our Partners Logo Section <------------------------------ */
+
+/* ------------------------------> Start Explore Section <------------------------------ */
+.explore-container {
+  background-image: url("../assets/explore-sea-beach.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.explore-container .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000000BF;
+}
+
+.explore-content {
+  padding: var(--padding-2xl) 0;
+}
+
+.explore-content .title {
+  border-bottom: 0.2vw solid var(--white-shade);
+  padding-top: var(--padding-xl);
+  padding-bottom: var(--padding-2xl);
+}
+
+.explore-content .title h2 {
+  font-size: var(--font-2xl);
+  color: var(--white-shade);
+}
+
+.explore-content .places {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap-lg);
+  padding-top: var(--padding-xl);
+}
+
+.explore-content .places .place-info {
+  width: 42%;
+}
+
+.explore-content .places .place-info p {
+  font-size: var(--font-base);
+  color: var(--white-shade);
+  line-height: 1.4;
+  padding-bottom: var(--padding-sm);
+}
+
+.explore-content .places .place-info button:hover {
+  background-color: var(--white-shade);
+  color: var(--primary-color);
+}
+
+.explore-content .places .places-cards {
+  width: 52%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-sm);
+}
+
+.places-cards .card {
+  width: 100%;
+  height: 100%;
+
+}
+
+.places-cards .card .card-image {
+  width: 100%;
+  height: min-content;
+}
+
+.places-cards .card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--secondary-border-radius);
+}
+
+.places-cards .card .card-title h6 {
+  font-size: var(--font-sm);
+  color: var(--white-shade);
+}
+
+/* ------------------------------> End Explore Section <------------------------------ */
 
 /* ------------------------------> Start Special Offer Section <------------------------------ */
 .special-offer-container {
