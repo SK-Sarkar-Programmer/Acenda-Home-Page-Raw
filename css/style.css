@@ -390,3 +390,64 @@ nav {
 }
 
 /* ------------------------------> End Our Partners Logo Section <------------------------------ */
+
+/* ------------------------------> Start Special Offer Section <------------------------------ */
+.special-offer-container {
+  display: flex;
+  align-items: center;
+  background-color: #008ec41a;
+  border-radius: var(--primary-border-radius);
+  overflow: hidden;
+}
+
+.special-offer-container .image {
+  width: 40%;
+}
+
+.special-offer-container .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.special-offer-container .content {
+  width: 60%;
+  text-align: center;
+}
+
+.special-offer-container .content .title h3 {
+  font-size: var(--font-lg);
+  line-height: 1.1;
+}
+
+.special-offer-container .content {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.special-offer-container .content .subscribe-box form input {
+  width: 100%;
+  background-color: #008ec41a;
+  font-size: var(--font-sm);
+  margin: var(--padding-sm) 0;
+  padding: var(--padding-xs);
+  border: none;
+  border-bottom: 0.2vw solid var(--primary-color);
+  border-radius: 0.3vw;
+  box-shadow: 0 0 1vw #0000004d;
+}
+
+.special-offer-container .content .subscribe-box form input:focus-within {
+  outline: none;
+}
+
+.special-offer-container
+  .content
+  .subscribe-box
+  form
+  input:focus-within::placeholder {
+  color: #008ec44d;
+  transition: 0.2s ease;
+}
+
+/* ------------------------------> End Special Offer Section <------------------------------ */
