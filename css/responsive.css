@@ -77,4 +77,22 @@
   .box {
     width: 100%;
   }
+
+  .special-offer-container {
+    flex-direction: column;
+  }
+
+  .special-offer-container .image {
+    width: 100%;
+    height: 30vw;
+  }
+
+  .special-offer-container .content {
+    width: 100%;
+    padding: var(--padding-xl) 0;
+  }
+
+  .special-offer-container .content .subscribe-box form input {
+    width: 80%;
+  }
 }
