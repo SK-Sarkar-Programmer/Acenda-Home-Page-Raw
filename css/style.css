@@ -4,7 +4,7 @@
   --primary-color: #008ec4;
   --white-shade: #f0f0f0;
   --black-shade: #101010;
-  --font-2xl: clamp(4rem, calc(3rem + 5vw), 100rem);
+  --font-2xl: clamp(4rem, calc(2rem + 5vw), 100rem);
   --font-xl: clamp(3rem, calc(1.5rem + 2.5vw), 100rem);
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --font-base: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
@@ -419,6 +419,7 @@ nav {
 .explore-content .title h2 {
   font-size: var(--font-2xl);
   color: var(--white-shade);
+  line-height: 1.1;
 }
 
 .explore-content .places {

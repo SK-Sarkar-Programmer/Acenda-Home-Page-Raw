@@ -18,6 +18,10 @@
   .box {
     width: 90%;
   }
+
+  .explore-content .places .places-cards {
+    width: 54%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -44,6 +48,18 @@
 
   .box:nth-child(3) {
     grid-column: 3 / span 4;
+  }
+
+  .explore-content .places {
+    flex-direction: column-reverse;
+  }
+
+  .explore-content .places .place-info {
+    width: 100%;
+  }
+
+  .explore-content .places .places-cards {
+    width: 100%;
   }
 }
 
