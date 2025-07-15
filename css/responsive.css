@@ -61,6 +61,11 @@
   .explore-content .places .places-cards {
     width: 100%;
   }
+
+  .footer-links-table {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -110,5 +115,24 @@
 
   .special-offer-container .content .subscribe-box form input {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .footer-links-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .copyright-container {
+    flex-direction: column-reverse;
+    gap: var(--gap-xs);
+  }
+
+  .copyright-content {
+    text-align: center;
+  }
+
+  .partners-payment-cards ul {
+    justify-content: center;
   }
 }

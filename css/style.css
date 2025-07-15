@@ -9,9 +9,10 @@
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --font-base: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
   --font-sm: clamp(1.3rem, calc(0.5rem + 0.7vw), 100rem);
-  --primary-icon-container-size: clamp(1.3rem, calc(1rem + 2vw), 100rem);
+  --primary-icon-container-size: clamp(2.5rem, calc(1rem + 2vw), 100rem);
   --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
   --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
+  --padding-base: clamp(1.6rem, calc(.7rem + 1.5vw), 100rem);
   --padding-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
   --padding-xs: clamp(0.8rem, calc(0.2rem + 0.5vw), 100rem);
   --gap-lg: clamp(0.5rem, calc(1rem + 2vw), 100rem);
@@ -539,6 +540,10 @@ nav {
 /* ------------------------------> End Special Offer Section <------------------------------ */
 
 /* ------------------------------> Start Footer Section <------------------------------ */
+footer {
+  margin-top: clamp(3rem, calc(2rem + 5vw), 100rem);
+}
+
 .footer-container {
   background-color: var(--black-shade);
   color: var(--white-shade);
@@ -548,6 +553,7 @@ nav {
 .footer-links-table {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-sm);
   padding-bottom: var(--padding-2xl);
 }
 
@@ -559,11 +565,12 @@ nav {
 .links-table-column ul {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--gap-sm);
 }
 
 .links-table-column ul li a {
   font-size: var(--font-sm);
+  line-height: 1.1;
 }
 
 .social-icon-container ul {
@@ -595,7 +602,8 @@ nav {
 .copyright-container {
   display: flex;
   justify-content: space-between;
-  padding-top: var(--padding-sm);
+  margin-top: var(--padding-sm);
+  padding-top: var(--padding-base);
   border-top: 0.2vw solid var(--white-shade);
 }
 
