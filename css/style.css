@@ -9,6 +9,7 @@
   --font-lg: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --font-base: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
   --font-sm: clamp(1.3rem, calc(0.5rem + 0.7vw), 100rem);
+  --primary-icon-container-size: clamp(1.3rem, calc(1rem + 2vw), 100rem);
   --padding-2xl: clamp(2rem, calc(1rem + 3vw), 100rem);
   --padding-xl: clamp(2rem, calc(1rem + 2vw), 100rem);
   --padding-sm: clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
@@ -403,7 +404,7 @@ nav {
 .explore-container .overlay {
   width: 100%;
   height: 100%;
-  background-color: #000000BF;
+  background-color: #000000b1;
 }
 
 .explore-content {
@@ -455,7 +456,6 @@ nav {
 .places-cards .card {
   width: 100%;
   height: 100%;
-
 }
 
 .places-cards .card .card-image {
@@ -537,3 +537,81 @@ nav {
 }
 
 /* ------------------------------> End Special Offer Section <------------------------------ */
+
+/* ------------------------------> Start Footer Section <------------------------------ */
+.footer-container {
+  background-color: var(--black-shade);
+  color: var(--white-shade);
+  padding: var(--padding-2xl) 0;
+}
+
+.footer-links-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: var(--padding-2xl);
+}
+
+.links-table-column .title h5 {
+  font-size: clamp(1.6rem, calc(0.5rem + 1.5vw), 100rem);
+  padding-bottom: var(--padding-sm);
+}
+
+.links-table-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.links-table-column ul li a {
+  font-size: var(--font-sm);
+}
+
+.social-icon-container ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.social-icon-container ul li a {
+  display: inline-block;
+  width: var(--primary-icon-container-size);
+  height: var(--primary-icon-container-size);
+  background-color: var(--white-shade);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social-icon-container ul li a i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black-shade);
+  font-size: var(--font-base);
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--padding-sm);
+  border-top: 0.2vw solid var(--white-shade);
+}
+
+.copyright-content p {
+  font-size: var(--font-sm);
+  color: #f0f0f080;
+}
+
+.partners-payment-cards ul {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.partners-payment-cards ul li i {
+  font-size: var(--font-lg);
+}
+
+/* ------------------------------> End Footer Section <------------------------------ */
