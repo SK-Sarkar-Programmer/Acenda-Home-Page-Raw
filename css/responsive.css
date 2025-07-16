@@ -50,6 +50,10 @@
     grid-column: 3 / span 4;
   }
 
+  .book-now-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .explore-content .places {
     flex-direction: column-reverse;
   }
@@ -119,6 +123,10 @@
 }
 
 @media only screen and (max-width: 520px) {
+  .book-now-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .footer-links-table {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -21,6 +21,7 @@
   --gap-xs: clamp(0.3rem, calc(0.3rem + 0.3vw), 100rem);
   --primary-border-radius: 5vw;
   --secondary-border-radius: 1vw;
+  --primary-dot-size: .7vw;
   --primary-transition: 0.3s ease;
 }
 
@@ -447,8 +448,8 @@ nav {
 
 .dot {
   border: none;
-  width: 10px;
-  height: 10px;
+  width: var(--primary-dot-size);
+  height: var(--primary-dot-size);
   background: #ffffff80;
   border-radius: 50%;
   margin: 0 5px;
@@ -485,7 +486,7 @@ nav {
 }
 
 .booking-card-info {
-  padding: var(--padding-xs) 0;
+  padding-bottom: var(--padding-xs);
 }
 
 .booking-card-info .title-and-price {
@@ -513,7 +514,7 @@ nav {
 
 .see-all-btn {
   text-align: center;
-  padding-top: var(--padding-xl);
+  padding-top: var(--padding-sm);
 }
 
 /* ------------------------------> End Top Booking Section <------------------------------ */
