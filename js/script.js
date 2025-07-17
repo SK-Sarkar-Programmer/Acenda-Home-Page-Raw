@@ -113,6 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const topBookingSliders = document.querySelectorAll(".top-booking-slider");
   topBookingSliders.forEach(
-    (slide) => new KeenSlider(slide, { loop: true }, [navigation])
+    (slider) => new KeenSlider(slider, { loop: true }, [navigation])
   );
 });

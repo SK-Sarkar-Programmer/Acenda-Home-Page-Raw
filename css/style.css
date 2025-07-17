@@ -650,6 +650,93 @@ nav {
 
 /* ------------------------------> End Features News Section <------------------------------ */
 
+/* ------------------------------> Start Testimonial Section <------------------------------ */
+.testimonial-container {
+  background-image: url("../assets/testimonial-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial-overlay {
+  background-color: #000000b1;
+}
+
+.testimonial-content {
+  padding: var(--padding-2xl) 0;
+}
+
+.testimonial-content h2 {
+  color: var(--white-shade);
+}
+
+.testimonial-content .navigation-wrapper {
+  padding-top: 0;
+}
+
+.testimonial-content .arrow {
+  color: var(--white-shade);
+  border: 0.2vw solid #f0f0f080;
+}
+
+.testimonial-content .dot {
+  background: #f0f0f04d;
+}
+
+.testimonial-content .dot--active {
+  background: #f0f0f0;
+}
+
+.testimonial-content .testimonial-card {
+  position: relative;
+  background-color: var(--white-shade);
+  font-size: var(--font-sm);
+  margin-top: 5vw;
+  padding: var(--padding-base);
+  padding-top: calc(clamp(1rem, calc(0.5rem + 2vw), 100rem) + var(--padding-xs));
+  border-radius: var(--secondary-border-radius);
+}
+
+.testimonial-card .profile-image {
+  position: absolute;
+  top: calc(15% - clamp(4rem, calc(2rem + 4vw), 100rem));
+  left: 5%;
+  width: clamp(4rem, calc(2rem + 4vw), 100rem);
+  height: clamp(4rem, calc(2rem + 4vw), 100rem);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial-card .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card .profile-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial-card .profile-info .person-info h6 {
+  font-size: var(--font-base);
+  line-height: 0.7;
+}
+
+.testimonial-card .profile-info .ratting-stars span i {
+  color: #f7b900;
+}
+
+.testimonial-card .profile-description {
+  padding-top: var(--padding-xs);
+}
+
+.testimonial-card .profile-description p {
+  line-height: 1.3;
+}
+
+/* ------------------------------> End Testimonial Section <------------------------------ */
+
 /* ------------------------------> Start Special Offer Section <------------------------------ */
 .special-offer-container {
   display: flex;

@@ -93,33 +93,39 @@ function navigation(slider) {
   });
 }
 
-var slider = new KeenSlider(
-  ".basic-slider",
-  {
-    breakpoints: {
-      "(min-width: 420px)": {
-        slides: { perView: 2, spacing: 15 }
+const basicSliders = document.querySelectorAll(".basic-slider");
+basicSliders.forEach(
+  (slider) =>
+    new KeenSlider(
+      slider,
+      {
+        breakpoints: {
+          "(min-width: 420px)": {
+            slides: { perView: 2, spacing: 15 },
+          },
+          "(min-width: 640px)": {
+            slides: { perView: 2, spacing: 30 },
+          },
+          "(min-width: 768px)": {
+            slides: { perView: 3, spacing: 15 },
+          },
+          "(min-width: 1024px)": {
+            slides: { perView: 3, spacing: 30 },
+          },
+        },
+        slides: { perView: 1, spacing: 10 },
+        loop: true,
       },
-      "(min-width: 640px)": {
-        slides: { perView: 2, spacing: 30 },
-      },
-      "(min-width: 768px)": {
-        slides: { perView: 3, spacing: 15 },
-      },
-      "(min-width: 1024px)": {
-        slides: { perView: 3, spacing: 30 },
-      },
-    },
-    slides: { perView: 1, spacing: 10 },
-    loop: true,
-  },
-  [navigation]
+      [navigation]
+    )
 );
 
-const arrowLeft = document.querySelector(".arrow--left");
-arrowLeft.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
+const arrowLefts = document.querySelectorAll(".arrow--left");
+arrowLefts.forEach(
+  (arrow) => (arrow.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`)
+);
 
-const arrowRight = document.querySelector(".arrow--right");
-arrowRight.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
-
-console.log(arrowRight);
+const arrowRights = document.querySelectorAll(".arrow--right");
+arrowRights.forEach(
+  (arrow) => (arrow.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`)
+);
