@@ -412,15 +412,15 @@ nav {
   overflow: hidden;
 }
 
-.keen-slider {
+.book-now-card .keen-slider {
   width: 100%;
   height: 100%;
   min-width: 0;
   border-radius: 0;
 }
 
-[class^="number-slide"],
-[class*=" number-slide"] {
+.book-now-card [class^="number-slide"],
+.book-now-card [class*=" number-slide"] {
   height: 100%;
   max-height: 100vh;
 }
@@ -433,7 +433,7 @@ nav {
   border-radius: var(--secondary-border-radius);
 }
 
-.navigation-wrapper {
+.book-now-card .navigation-wrapper {
   position: relative;
   height: 100%;
 }
@@ -447,7 +447,7 @@ nav {
   justify-content: center;
 }
 
-.dot {
+.book-now-cards .dot {
   border: none;
   width: var(--primary-dot-size);
   height: var(--primary-dot-size);
@@ -458,17 +458,17 @@ nav {
   cursor: pointer;
 }
 
-.dot:focus {
+.book-now-cards .dot:focus {
   outline: none;
 }
 
-.dot--active {
+.book-now-cards .dot--active {
   background: #fff;
 }
 
 .book-now-card .rating {
   position: absolute;
-  top: 5%;
+  top: 13%;
   right: 3%;
   z-index: 10;
   background-color: #10101080;
@@ -609,7 +609,6 @@ nav {
   width: 100%;
   height: 100%;
   background-color: #1010101a;
-  padding-bottom: var(--padding-xs);
   border-radius: var(--secondary-border-radius);
   overflow: hidden;
 }
@@ -624,14 +623,23 @@ nav {
   padding: var(--padding-sm);
 }
 
+.feature-news-card .card-info .title {
+  padding-top: var(--padding-xs);
+}
+
 .feature-news-card .card-info .title h5 {
   font-size: var(--font-base);
   line-height: 1;
 }
 
+.feature-news-card .card-info .description {
+  padding: var(--padding-sm) 0;
+}
+
 .feature-news-card .card-info p {
-  color: #10101080;
+  color: #101010cc;
   font-size: var(--font-sm);
+  line-height: 1.4;
 }
 
 .feature-news-card .card-info .card-link a {

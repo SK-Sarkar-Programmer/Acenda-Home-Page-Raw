@@ -11,6 +11,7 @@
 .navigation-wrapper {
   position: relative;
   height: 100%;
+  padding-top: clamp(1.6rem, calc(0.7rem + 1.5vw), 100rem);
 }
 
 .dots {
@@ -21,9 +22,9 @@
 
 .dot {
   border: none;
-  width: 10px;
-  height: 10px;
-  background: #c5c5c5;
+  width: 0.7vw;
+  height: 0.7vw;
+  background: #1010104d;
   border-radius: 50%;
   margin: 0 5px;
   padding: 5px;
@@ -40,7 +41,7 @@
 
 .arrow {
   position: absolute;
-  top: -20%;
+  top: calc(-4% - clamp(1.2rem, calc(0.7rem + 1.2vw), 100rem));
   font-size: clamp(1.2rem, calc(0.7rem + 1.2vw), 100rem);
   padding: 0 clamp(1rem, calc(0.5rem + 0.7vw), 100rem);
   border: 0.2vw solid #10101080;
@@ -54,4 +55,22 @@
 
 .arrow--right {
   right: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .arrow {
+    top: calc(-3.5% - clamp(1.2rem, calc(0.7rem + 1.2vw), 100rem));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .arrow {
+    top: calc(-3% - clamp(1.2rem, calc(0.7rem + 1.2vw), 100rem));
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .arrow {
+    top: calc(-2.7% - clamp(1.2rem, calc(0.7rem + 1.2vw), 100rem));
+  }
 }

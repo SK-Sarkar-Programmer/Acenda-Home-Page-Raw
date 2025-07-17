@@ -95,7 +95,24 @@ function navigation(slider) {
 
 var slider = new KeenSlider(
   ".basic-slider",
-  { slides: { perView: 3, spacing: 10 }, loop: true },
+  {
+    breakpoints: {
+      "(min-width: 420px)": {
+        slides: { perView: 2, spacing: 15 }
+      },
+      "(min-width: 640px)": {
+        slides: { perView: 2, spacing: 30 },
+      },
+      "(min-width: 768px)": {
+        slides: { perView: 3, spacing: 15 },
+      },
+      "(min-width: 1024px)": {
+        slides: { perView: 3, spacing: 30 },
+      },
+    },
+    slides: { perView: 1, spacing: 10 },
+    loop: true,
+  },
   [navigation]
 );
 
