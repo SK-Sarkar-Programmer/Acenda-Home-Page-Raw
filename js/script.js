@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Navigation Menu Toggle
   const menuBtns = document.querySelectorAll(".menu-btn");
+  const navSection = document.querySelector(".navigation-small-device");
   let isMenuOpen = false;
 
   menuBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        navSection.style.display = "block";
+        navSection.style.opacity = "1";
+      } else {
+        navSection.style.display = "none";
+        navSection.style.opacity = "0";
+      }
     });
   });
 

@@ -73,11 +73,14 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .web-main-row {
+  .web-main-row,
+  .small-device-navigation .close-menu,
+  .small-device-navigation ul {
     width: 95%;
   }
 
-  nav {
+  nav,
+  .small-device-navigation .close-menu {
     height: 10%;
   }
 
@@ -122,7 +125,11 @@
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 540px) {
+  .small-device-navigation {
+    width: 100%;
+  }
+
   .book-now-cards {
     grid-template-columns: repeat(2, 1fr);
   }

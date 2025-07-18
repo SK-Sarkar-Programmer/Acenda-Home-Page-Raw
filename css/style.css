@@ -195,6 +195,56 @@ nav {
   background-color: #1010104d;
 }
 
+.small-device-navigation {
+  width: 50%;
+  height: 100%;
+  background-color: var(--white-shade);
+  margin-left: auto;
+}
+
+.small-device-navigation .close-menu {
+  width: 85%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 0 auto;
+}
+
+.small-device-navigation .close-menu .menu-btn i {
+  font-size: var(--font-xl);
+}
+
+.small-device-navigation ul {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.small-device-navigation ul li a {
+  display: inline-block;
+  width: 100%;
+  font-size: var(--font-xl);
+  line-height: 1;
+  margin-top: var(--padding-base);
+  padding: var(--padding-sm);
+  border-bottom: 0.3vw solid #1010104d;
+}
+
+.small-device-navigation ul li:first-child a {
+  margin-top: 0;
+}
+
+.small-device-navigation .nav-logo {
+  text-align: center;
+  padding-top: var(--padding-xl);
+}
+
+.small-device-navigation .nav-logo a {
+  color: var(--primary-color);
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
 .banner {
   width: 100%;
   height: 100%;
@@ -470,7 +520,7 @@ nav {
   position: absolute;
   top: 13%;
   right: 3%;
-  z-index: 10;
+  z-index: 9;
   background-color: #10101080;
   padding: var(--padding-xs);
   border-radius: var(--secondary-border-radius);
@@ -691,18 +741,21 @@ nav {
   position: relative;
   background-color: var(--white-shade);
   font-size: var(--font-sm);
-  margin-top: 5vw;
-  padding: var(--padding-base);
-  padding-top: calc(clamp(1rem, calc(0.5rem + 2vw), 100rem) + var(--padding-xs));
+  margin-top: clamp(5rem, calc(1rem + 4.5vw), 100rem);
+  padding: var(--padding-sm);
+  padding-top: calc(
+    clamp(3rem, calc(0.7rem + 2vw), 100rem) + var(--padding-xs)
+  );
   border-radius: var(--secondary-border-radius);
 }
 
 .testimonial-card .profile-image {
   position: absolute;
-  top: calc(15% - clamp(4rem, calc(2rem + 4vw), 100rem));
+  top: calc(15% - clamp(6rem, calc(2rem + 4.5vw), 100rem));
   left: 5%;
-  width: clamp(4rem, calc(2rem + 4vw), 100rem);
-  height: clamp(4rem, calc(2rem + 4vw), 100rem);
+  width: clamp(6rem, calc(2rem + 4.5vw), 100rem);
+  height: clamp(6rem, calc(2rem + 4.5vw), 100rem);
+  background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -721,6 +774,10 @@ nav {
 .testimonial-card .profile-info .person-info h6 {
   font-size: var(--font-base);
   line-height: 0.7;
+}
+
+.testimonial-card .profile-info .person-info p {
+  color: #101010cc;
 }
 
 .testimonial-card .profile-info .ratting-stars span i {
